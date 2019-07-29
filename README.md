@@ -1,7 +1,7 @@
 # hlf-multiplehosts
 
 ### Structure 
-
+```
 Org1
 ├─Peers
 ├   ├─peer0.org1.example.com
@@ -14,3 +14,5 @@ Org1
 ├    ├─orderer2.org1.example.com
 ├
 ├─ca.example.com
+
+```
