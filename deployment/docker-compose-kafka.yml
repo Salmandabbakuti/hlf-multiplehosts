@@ -14,12 +14,12 @@ services:
             - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.org1.example.com-cert.pem
             - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/e92ef8b3d04d0badfa852d72c0f4ad4503513bcd6b4ca28aabbee98d5adfad0c_sk
         extra_hosts:
-            - "peer0.org1.example.com:35.236.41.145"
-            - "peer1.org1.example.com:34.93.9.7"
-            - "peer2.org1.example.com:34.93.15.76"
+            - "peer0.org1.example.com:34.93.9.7"
+            - "peer1.org1.example.com:35.187.235.31"
+            - "peer2.org1.example.com:35.197.143.17"
         ports:
             - "7054:7054"
-        command: sh -c 'fabric-ca-server start -b admin:adminpw'
+        command: sh -c 'fabric-ca-server start -b admin:adminpw -d'
         volumes:
             - ../crypto-config/peerOrganizations/org1.example.com/ca/:/etc/hyperledger/fabric-ca-server-config
         container_name: ca.example.com
@@ -163,9 +163,9 @@ services:
             - ORDERER_ABSOLUTEMAXBYTES=${ORDERER_ABSOLUTEMAXBYTES}
             - ORDERER_PREFERREDMAXBYTES=${ORDERER_PREFERREDMAXBYTES}
         extra_hosts:
-            - "peer0.org1.example.com:35.236.41.145"
-            - "peer1.org1.example.com:34.93.9.7"
-            - "peer2.org1.example.com:34.93.15.76"
+            - "peer0.org1.example.com:34.93.9.7"
+            - "peer1.org1.example.com:35.187.235.31"
+            - "peer2.org1.example.com:35.197.143.171"
         volumes:
             - ../crypto-config/ordererOrganizations/example.com/orderers/orderer0.example.com/msp:/var/hyperledger/msp
             - ../crypto-config/ordererOrganizations/example.com/orderers/orderer0.example.com/tls:/var/hyperledger/tls
@@ -200,9 +200,9 @@ services:
             - ORDERER_ABSOLUTEMAXBYTES=${ORDERER_ABSOLUTEMAXBYTES}
             - ORDERER_PREFERREDMAXBYTES=${ORDERER_PREFERREDMAXBYTES}
         extra_hosts:
-            - "peer0.org1.example.com:35.236.41.145"
-            - "peer1.org1.example.com:34.93.9.7"
-            - "peer2.org1.example.com:34.93.15.76"
+            - "peer0.org1.example.com:34.93.9.7"
+            - "peer1.org1.example.com:35.187.235.31"
+            - "peer2.org1.example.com:35.197.143.171"
         volumes:
             - ../crypto-config/ordererOrganizations/example.com/orderers/orderer1.example.com/msp:/var/hyperledger/msp
             - ../crypto-config/ordererOrganizations/example.com/orderers/orderer1.example.com/tls:/var/hyperledger/tls
@@ -235,9 +235,9 @@ services:
             - ORDERER_ABSOLUTEMAXBYTES=${ORDERER_ABSOLUTEMAXBYTES}
             - ORDERER_PREFERREDMAXBYTES=${ORDERER_PREFERREDMAXBYTES}
         extra_hosts:
-            - "peer0.org1.example.com:35.236.41.145"
-            - "peer1.org1.example.com:34.93.9.7"
-            - "peer2.org1.example.com:34.93.15.76"
+            - "peer0.org1.example.com:34.93.9.7"
+            - "peer1.org1.example.com:35.187.235.31"
+            - "peer2.org1.example.com:35.197.143.171"
         volumes:
             - ../crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/msp:/var/hyperledger/msp
             - ../crypto-config/ordererOrganizations/example.com/orderers/orderer2.example.com/tls:/var/hyperledger/tls
