@@ -16,6 +16,7 @@ Org1
 ├─ca.example.com
 
 ```
+<img align="center" src="https://github.com/Salmandabbakuti/hlf-multiplehosts/blob/master/structure.png">
 
 ### Steps
 
