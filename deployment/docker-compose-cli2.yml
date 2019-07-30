@@ -18,9 +18,9 @@ services:
       - CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
       - CORE_CHAINCODE_KEEPALIVE=10
     extra_hosts:
-      - "orderer0.example.com:34.87.28.205"
-      - "orderer1.example.com:34.87.28.205"
-      - "orderer2.example.com:34.87.28.205"
+      - "orderer0.example.com:34.93.15.76"
+      - "orderer1.example.com:34.93.15.76"
+      - "orderer2.example.com:34.93.15.76"
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
     command: /bin/bash
     volumes:
