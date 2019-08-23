@@ -50,9 +50,11 @@ configtxgen -profile OneOrgsChannel -outputAnchorPeersUpdate ./network-config/Or
 git init
 git add .
 git commit -m "adding crypto-files"
+git remote add origin <Your Remote Repository URL>
+
 git push -u origin master
 
-git clone https://github.com/Salmandabbakuti/hlf-multiplehosts.git     #clone to all 3 hosts
+git clone <Your Repository URL>     #clone to all 3 hosts
 
 cd hlf-multiplehosts
 ```
